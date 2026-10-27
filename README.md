@@ -6,7 +6,7 @@
 [![Jetpack Compose](https://img.shields.io/badge/Android-Jetpack%20Compose-3DDC84.svg)](https://developer.android.com/jetpack/compose)
 [![Tests Passing](https://img.shields.io/badge/tests-32%20passed-brightgreen.svg)]()
 
-**SanRaksha** is an open-source, AI-driven maternal healthcare ecosystem designed for **ASHA workers, ANMs, and PHC/CHC clinicians** in rural and semi-urban India. It combines **physical obstetrics risk classification** (hypertension, gestational diabetes, vital signs) with a comprehensive **maternal mental health and longitudinal trajectory tracking system** (PHQ-9 / EPDS screening, contextual psychosocial risk modeling, and visit-over-visit trajectory analytics).
+**MatriAarogya** is an open-source, AI-driven maternal healthcare ecosystem designed for **ASHA workers, ANMs, and PHC/CHC clinicians** in rural and semi-urban India. It combines **physical obstetrics risk classification** (hypertension, gestational diabetes, vital signs) with a comprehensive **maternal mental health and longitudinal trajectory tracking system** (PHQ-9 / EPDS screening, contextual psychosocial risk modeling, and visit-over-visit trajectory analytics).
 
 ---
 
@@ -107,7 +107,7 @@ The system rigorously separates maternal mental health assessment into **three d
 > Cross-sectional datasets cannot measure true temporal latency or time-to-event outcomes across antepartum to postpartum transitions.
 > Claiming that a model trained on cross-sectional data can "predict future postpartum depression months in advance" is **methodologically flawed and clinically dangerous** (can lead to false reassurance and missed interventions).
 > 
-> SanRaksha exposes a formalized `FutureRiskModelInterface` (`app/mental_health/future_model.py`) that returns:
+> MatriAarogya exposes a formalized `FutureRiskModelInterface` (`app/mental_health/future_model.py`) that returns:
 > ```json
 > {
 >   "available": false,
@@ -291,8 +291,8 @@ python -m pytest tests/ -v
 ### 1. Environment Setup
 ```bash
 # Clone the repository
-git clone https://github.com/sys6-exe/SanRaksha.git
-cd "sanraksha part2"
+git clone https://github.com/sys6-exe/MatriAarogya.git
+cd "MatriAarogya part2"
 
 # Install Python dependencies
 pip install fastapi uvicorn pydantic scikit-learn tensorflow pandas numpy streamlit plotly requests pytest
@@ -311,7 +311,7 @@ streamlit run dashboard/app.py
 ```
 
 ### 4. Build & Run Android App
-1. Open `C:\Users\Akansha Srivastava\AndroidStudioProjects\SanRakshaApp` (or `AndroidApp/sanraksha`) in **Android Studio Ladybug / Meerkat**.
+1. Open `C:\Users\Akansha Srivastava\AndroidStudioProjects\SanRakshaApp` (or `AndroidApp/MatriAarogya`) in **Android Studio Ladybug / Meerkat**.
 2. Sync Gradle files.
 3. Update `BASE_URL` in `healthApiService.kt` if running on an emulator (`http://10.0.2.2:8000/`) or physical phone (`http://<YOUR_IP>:8000/`).
 4. Run on Android device or emulator.
